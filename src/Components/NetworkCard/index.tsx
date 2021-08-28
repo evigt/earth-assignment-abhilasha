@@ -4,9 +4,13 @@ import { Avatar } from "react-native-paper";
 import cryptoIcon from "../../../assets/crypto-Icon.png";
 import { styles } from "./styles";
 
-const NetworkCard = () => {
+const NetworkCard = (props: { isLast?: boolean }) => {
   return (
-    <View style={styles.container}>
+    <View
+      style={
+        props.isLast ? styles.networkCardContainerNoBorder : styles.networkCardContainer
+      }
+    >
       <View style={styles.imageView}>
         <Avatar.Image size={32} source={cryptoIcon} />
         <View style={styles.cardLeftTextView}>

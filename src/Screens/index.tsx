@@ -21,7 +21,7 @@ const HomeScreen = () => {
             <Image source={threeDotsIcon} style={styles.threeDotIcon} />
           </View>
           <View style={styles.cardContentView}>
-            <ButtonUI buttonLabel="Earth Association"/>
+            <ButtonUI buttonLabel="Earth Association" />
             <Text style={styles.currency}>$209,092.22</Text>
             <Text style={styles.currencyStats}>+12.34%</Text>
           </View>
@@ -32,7 +32,7 @@ const HomeScreen = () => {
             </View>
             <NetworkCard />
             <NetworkCard />
-            <NetworkCard />
+            <NetworkCard isLast />
           </View>
         </View>
       </ImageBackground>

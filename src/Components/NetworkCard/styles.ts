@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import { scaledValue } from "../../utils/design.utils";
 export const styles = StyleSheet.create({
-  container: {
+  networkCardContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
     height: scaledValue(60),
@@ -10,6 +10,17 @@ export const styles = StyleSheet.create({
     borderBottomColor: "#40495c",
     borderBottomWidth: scaledValue(1)
   },
+
+  networkCardContainerNoBorder: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    height: scaledValue(60),
+    alignItems: "center",
+    paddingHorizontal: scaledValue(10),
+    borderBottomColor: "#40495c",
+    borderBottomWidth: scaledValue(0)
+  },
+
   cardTitleText: {
     color: "#FAFBFB",
     fontSize: scaledValue(14),
