@@ -10,10 +10,11 @@ export const styles = StyleSheet.create({
         borderRadius: scaledValue(14),
         marginTop: scaledValue(205),
     },
-    currency: {
+    currencyText: {
         fontSize: scaledValue(32),
         color: "#fff",
         marginTop: scaledValue(15.86),
+        fontWeight: "500",
     },
     currencyStats: {
         marginTop: scaledValue(13),
@@ -28,10 +29,12 @@ export const styles = StyleSheet.create({
         marginTop: scaledValue(20.14),
         paddingVertical: scaledValue(17)
     },
-    threeDotIcon: {
+    threeDotIconView: {
         position: "absolute",
         left: scaledValue(284),
         top: scaledValue(27.36),
+    },
+    threeDotIcon:{
         width: scaledValue(19),
         height: scaledValue(3),
     },
@@ -51,7 +54,7 @@ export const styles = StyleSheet.create({
         marginBottom: scaledValue(14.98)
     },
     backgroundImage: {
-        flex: 1, 
+        flex: 1,
         alignItems: 'center',
     }
 });
