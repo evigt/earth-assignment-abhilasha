@@ -1,26 +1,43 @@
 import React from "react";
-import { StyleSheet, View, ImageBackground } from "react-native";
+import { View, ImageBackground, Image, Text } from "react-native";
 import CardBackgroundBg from "../../assets/card-bg.png";
-import CardScreen from "../Components/CardScreen";
+import ButtonUI from "../Components/Button";
+import threeDotsIcon from "../../assets/three-dots.png";
+import plusCircleIcon from "../../assets/plus-circle.png";
+import NetworkCard from "../Components/NetworkCard";
+import { styles } from "./styles";
+import { Avatar } from "react-native-paper";
 
 const HomeScreen = () => {
   return (
     <View style={styles.container}>
       <ImageBackground
         source={CardBackgroundBg}
-        resizeMode="cover"
-        style={{ flex: 1 }}
+        resizeMode="stretch"
+        style={styles.backgroundImage}
       >
-        <CardScreen />
+        <View style={styles.cardView}>
+          <View style={styles.threeDotIcon}>
+            <Image source={threeDotsIcon} style={styles.threeDotIcon} />
+          </View>
+          <View style={styles.cardContentView}>
+            <ButtonUI buttonLabel="Earth Association"/>
+            <Text style={styles.currency}>$209,092.22</Text>
+            <Text style={styles.currencyStats}>+12.34%</Text>
+          </View>
+          <View style={styles.networkCardView}>
+            <View style={styles.networkTextView}>
+              <Text style={styles.networkText}>Networks</Text>
+              <Avatar.Image size={20} source={plusCircleIcon} style={styles.avatarPlusIcon} />
+            </View>
+            <NetworkCard />
+            <NetworkCard />
+            <NetworkCard />
+          </View>
+        </View>
       </ImageBackground>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 export default HomeScreen;
